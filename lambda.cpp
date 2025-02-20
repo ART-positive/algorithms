@@ -18,3 +18,13 @@ auto dfs = [&](int x, auto&& dfs) -> void {
         if(used[x] != inf) used[x] = 3;
     }
 };
+void solve() {
+  vector<string> v;
+  string s;
+  while (cin >> s) {
+    v.push_back(s);
+  }
+  sort(v.begin(), v.end(), [](string& a, string& b) { return a + b > b + a; });
+  for (auto e : v)
+    cout << e;
+}
